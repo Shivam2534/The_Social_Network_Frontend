@@ -33,6 +33,7 @@ function CurrentuserProfile() {
   const [email, setemail] = useState("");
   const navigate = useNavigate();
 
+
   const formatDuration = (createdAt) => {
     const createdAtDate = new Date(createdAt);
     if (isNaN(createdAtDate.getTime())) {
@@ -91,8 +92,18 @@ function CurrentuserProfile() {
     }
   };
 
+  const fetchUpdatedData = async () => {
+    try {
+      const res = await userRequest.post(`${Host_Name}/user/currentdata`);
+      
+      dispatch(updateCurrentUserData(res.data.data));
+      localStorage.setItem("userData", JSON.stringify(res.data.data));
+    } catch (error) {
+      toast("Unable to fetch updated data");
+    }
+  };
+
   const DeletePost = async (postIdToDelete) => {
-    console.log("Request received to delete post");
     try {
       const res = await userRequest.post(`${Host_Name}/post/deletepost`, {
         postIdToDelete: postIdToDelete,
@@ -100,6 +111,8 @@ function CurrentuserProfile() {
 
       console.log(res.data);
       toast(res.data.message);
+      findCuurrentuserPosts();
+      fetchUpdatedData();
     } catch (error) {
       toast("Unable to delete post");
     }
@@ -110,9 +123,8 @@ function CurrentuserProfile() {
   };
 
   useEffect(() => {
-    // if (Currentuserposts == null) {
+    fetchUpdatedData();
     findCuurrentuserPosts();
-    // }
   }, []);
 
   return (
