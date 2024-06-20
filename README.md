@@ -79,10 +79,10 @@ Follow these steps to set up and run the project locally.
    3. pass - 12345
     ```
 
-  ```sh
+   ```sh
    -  second account
    1. usermame - lalu_iitr
    2. email- lalu@gmail.com
    3. pass - 12345
- ```
+   ```
 
