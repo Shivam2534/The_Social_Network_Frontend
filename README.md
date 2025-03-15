@@ -1,4 +1,4 @@
-# React + Vite
+# Backend code link - https://github.com/Shivam2534/The_Social_Network_Backend
 
 # Social Media Application
 
@@ -52,18 +52,18 @@ Follow these steps to set up and run the project locally.
 - Create a `.env` file in the `Backend` directory and add the following environment  variables:
 
   PORT = 8000
-  MONGODB_URI = mongodb+srv://shivamkanchole:21411030@cluster0.5yqxe78.mongodb.net
+  MONGODB_URI =""
   CORS_ORIGIN = *
 
-  ACCESS_TOKEN_SECRET = eyJhbGciOiJIUzI1NiJ9eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIi
-  ACCESS_TOKEN_EXPIRY = "1d"
+  ACCESS_TOKEN_SECRET = 
+  ACCESS_TOKEN_EXPIRY = 
 
-  REFRESH_TOKEN_SECRET = eyJhbGciOiJIUzI1NiJ9eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIi
-  REFRESH_TOKEN_EXPIRY = "10d"
+  REFRESH_TOKEN_SECRET = 
+  REFRESH_TOKEN_EXPIRY = 
 
   CLOUDINARY_CLOUD_NAME = youtube-cloud-content
-  CLOUDINARY_API_KEY = 689134239623785
-  CLOUDINARY_API_SECRET = OICLY-yOTllUsgaYE5UAnWvUhMs
+  CLOUDINARY_API_KEY = 
+  CLOUDINARY_API_SECRET = 
 
 - Start the backend server:
 
